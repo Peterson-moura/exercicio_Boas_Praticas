@@ -4,13 +4,13 @@ import Peterson.moura.exercicios.boasPraticas.HabilitacaoMoto;
 
 public class Entregador {
 
-    private String nome;
+    public String nome;
 
-    private String email;
+    public String email;
 
-    private String telefone;
+    public String telefone;
 
-    private HabilitacaoMoto habilitacaoMoto;
+    public HabilitacaoMoto habilitacaoMoto;
 
     public Entregador(String nome, String email,  HabilitacaoMoto habilitacaoMoto) {
         this.nome = nome;
@@ -25,4 +25,9 @@ public class Entregador {
     public HabilitacaoMoto getHabilitacaoMoto() {
         return habilitacaoMoto;
     }
+
+    public boolean ehValidaHabilitacao(){
+        return getHabilitacaoMoto().getValida() == true;
+    }
+
 }

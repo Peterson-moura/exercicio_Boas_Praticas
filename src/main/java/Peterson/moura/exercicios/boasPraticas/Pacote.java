@@ -2,11 +2,11 @@ package Peterson.moura.exercicios.boasPraticas;
 
 public class Pacote {
 
-    private String descricao;
+    public String descricao;
 
-    private Double peso;
+    public Double peso;
 
-    private Double metrosCubicos;
+    public Double metrosCubicos;
 
     public Pacote(String descricao, Double peso, Double metrosCubicos) {
         this.descricao = descricao;
@@ -25,4 +25,13 @@ public class Pacote {
     public Double getMetrosCubicos() {
         return metrosCubicos;
     }
+
+    public boolean ehvalidoParaBicicleta() {
+        return getPeso() < 100d;
+    }
+    public boolean ehValidoParaCarro(){
+        return getMetrosCubicos()<30d;
+    }
+
+
 }

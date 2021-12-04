@@ -6,7 +6,7 @@ import Peterson.moura.exercicios.boasPraticas.tiposEntregas.EntregaDeBicicleta;
 
 public class EntregaService {
 
-    private final EntregaDeBicicleta tipoEntrega;
+    private final EntregaDeBicicleta entregadeBicicleta;
 
     private final Entregador entregador;
 
@@ -14,8 +14,8 @@ public class EntregaService {
 
     private final Pacote pacote;
 
-    public EntregaService(EntregaDeBicicleta tipoEntrega, Entregador entregador, Cliente cliente, Pacote pacote) {
-        this.tipoEntrega = tipoEntrega;
+    public EntregaService(EntregaDeBicicleta entregadeBicicleta, Entregador entregador, Cliente cliente, Pacote pacote) {
+        this.entregadeBicicleta = entregadeBicicleta;
         this.entregador = entregador;
         this.cliente = cliente;
         this.pacote = pacote;
@@ -32,7 +32,7 @@ public class EntregaService {
             }
         }
         if (pacote.getPeso()<100){
-            return tipoEntrega.entregar(entregador,cliente,pacote);
+            return  entregadeBicicleta.entregar(entregador,cliente,pacote);
         }else{
             throw  new RuntimeException("Não dá pra carregar isso na bicileta! Muito pesado!");
         }
